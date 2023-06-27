@@ -1,0 +1,25 @@
+testSet = []
+
+x = 1
+
+
+def factorial():
+  n = int(x)
+  answer = n
+  while n > 1:
+    answer = answer * (n - 1)
+    n -= 1
+  testSet.append(answer)
+
+
+for i in range(200):
+  factorial()
+  x += 1
+
+def zeroTest(nbr):
+  return str(nbr).endswith("0" * 40) and not str(nbr).endswith("0" * 41)
+
+
+for index, nbr in enumerate(testSet, start=1):
+  if zeroTest(nbr):
+    print(nbr, index)
