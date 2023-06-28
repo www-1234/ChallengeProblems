@@ -1,0 +1,7 @@
+import math
+sum = 0
+for i in range(10000, 100000):
+  sum += i
+  prd = math.factorial(i)
+  if prd%sum == 0:
+    print(i)
