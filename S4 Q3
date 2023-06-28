@@ -4,8 +4,8 @@ for i in range(10000, 99999):
   a = i
   string = str(i)
   sum = 0
-  for j in string:
-    number = int(j)
+  for i in string:
+    number = int(i)
     sum += number
   b = sum
   ans = (a/b)
