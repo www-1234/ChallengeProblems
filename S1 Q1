@@ -1,0 +1,23 @@
+for i in range(123456789,987654321):
+  x = i
+  nbr = str(x)
+  nbrSet = set(nbr)
+  if len(nbrSet) == len(nbr):
+    if "0" not in nbr:
+      if x%9 == 0:
+        x = x//10
+        if x%8 == 0:
+          x = x//10
+          if x%7 == 0:
+            x = x//10
+            if x%6 == 0:
+              x=x//10
+              if x%5 == 0:
+                x = x//10
+                if x%4 == 0:
+                  x = x//10
+                  if x%3 ==0:
+                    x = x//10
+                    if x%2 == 0:
+                      print (i)
+              
