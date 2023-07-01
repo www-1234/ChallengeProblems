@@ -1,0 +1,6 @@
+def funkshin(x):
+  return 2 / ((4 ** x) + 2)
+n = 0 
+for i in range(1,2001):
+  n += (funkshin((i/2001)))
+print(n)  
