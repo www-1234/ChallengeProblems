@@ -1,0 +1,40 @@
+a = 0
+b = 0
+c = 0
+
+def combine(x, y, z):
+  n1 = str(x)
+  n2 = str(y)
+  n3 = str(z)
+  nnn = n1 + n2 + n3
+  nnn = int(nnn)
+  return nnn
+
+counter = 0
+def checkDigit(x):
+  counter = 0
+  for i in range(len(x)):
+    if x[i] == "2":
+      counter += 1
+  return counter
+      
+
+for i in range(10):
+  b = 0
+  for i in range(10):
+    c = 0
+    for i in range(10):
+      x = combine(a,b,c)
+      y = combine(b,c,a)
+      z = combine(c,a,b)
+      numba = x*y*z
+      strNumba = str(numba)
+      if len(strNumba) == 9:
+        if strNumba.endswith("6"):
+          if checkDigit(strNumba) == 3:
+            print(numba)
+            print(x,y,z)
+      c += 1
+    b += 1
+  a += 1
+
